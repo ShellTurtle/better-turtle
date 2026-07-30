@@ -3,7 +3,7 @@
 	"id": "better-turtle",
 	"version": "${version}",
 	"name": "Better Turtle",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "这个模组增加了一些有关乌龟的新内容",
 	"authors": [
 		"ShellTurtle"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/ShellTurtle/better-turtle"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/better-turtle/icon.png",
 	"environment": "*",
 	"entrypoints": {
