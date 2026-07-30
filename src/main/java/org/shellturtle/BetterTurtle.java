@@ -23,7 +23,7 @@ public class BetterTurtle implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.register();
-		LOGGER.info("[Better Turtle]Better Turtle加载完成！");
+		LOGGER.info("Better Turtle加载完成！");
 	}
 
 	public static Identifier id(String path) {
