@@ -5,11 +5,11 @@
 	"name": "Better Turtle",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"ShellTurtle"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/ShellTurtle/better-turtle"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/better-turtle/icon.png",
@@ -19,12 +19,9 @@
 			"org.shellturtle.BetterTurtle"
 		]
 	},
-	"mixins": [
-		"better-turtle.mixins.json"
-	],
 	"depends": {
-		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.2",
+		"fabricloader": "*",
+		"minecraft": "26.*",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
