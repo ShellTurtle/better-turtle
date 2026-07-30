@@ -12,8 +12,10 @@ public class ModConsumable {
     public static final Consumable TURTLE_JELLY = Consumables.defaultFood()
             .onConsume(new ApplyStatusEffectsConsumeEffect(
                     List.of(
+                            new MobEffectInstance(MobEffects.REGENERATION, 4800, 2),
+                            new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 4800),
                             new MobEffectInstance(MobEffects.RESISTANCE, 2400, 4),
-                            new MobEffectInstance(MobEffects.SLOWNESS, 24000, 9)
+                            new MobEffectInstance(MobEffects.SLOWNESS, 2400, 9)
                     ), 0.5F
             )).build();
 
