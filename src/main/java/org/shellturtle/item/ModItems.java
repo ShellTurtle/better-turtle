@@ -1,14 +1,11 @@
 package org.shellturtle.item;
 
-import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
-import net.minecraft.data.recipes.CustomCraftingRecipeBuilder;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import org.shellturtle.food.ModFoods;
-
-import net.minecraft.world.item.BlockItem;
 import org.shellturtle.BetterTurtle;
 
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +16,7 @@ import net.minecraft.world.item.Item;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item TURTLE_JELLY = registerItem("turtle_jelly",Item::new , new Item.Properties().food(ModFoods.TURTLE_JELLY));
+    public static final Item TURTLE_JELLY = registerItem("turtle_jelly",Item::new , new Item.Properties().food(ModFoods.TURTLE_JELLY, ModConsumable.TURTLE_JELLY));
 
     private static Item registerItem(final String name, final Function<Item.Properties, Item> itemFactory, final Item.Properties properties) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BetterTurtle.MOD_ID, name));

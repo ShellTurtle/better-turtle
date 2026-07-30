@@ -1,4 +1,4 @@
-package org.shellturtle.food;
+package org.shellturtle.item;
 
 import net.minecraft.world.food.FoodProperties;
 
