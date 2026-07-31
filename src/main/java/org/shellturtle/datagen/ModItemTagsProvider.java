@@ -22,12 +22,8 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        builder(ModItemTags.TURTLE_SCUTE_ARMOR)
-                .add(ItemIds.TURTLE_SCUTE);
+        builder(ModItemTags.TURTLE_SCUTE_ARMOR).add(ItemIds.TURTLE_SCUTE);
 
-        // Add armor pieces to the vanilla slot tags. These flow into the
-        // minecraft:enchantable/* tags (armor, durability, equippable, vanishing),
-        // so the armor becomes enchantable exactly like vanilla armor.
         builder(ItemTags.HEAD_ARMOR).add(keyOf(ModItems.TURTLE_SCUTE_HELMET));
         builder(ItemTags.CHEST_ARMOR).add(keyOf(ModItems.TURTLE_SCUTE_CHESTPLATE));
         builder(ItemTags.LEG_ARMOR).add(keyOf(ModItems.TURTLE_SCUTE_LEGGINGS));

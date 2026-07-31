@@ -30,6 +30,39 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                         .unlockedBy("has_item", has(Items.TURTLE_SCUTE))
                         .save(output);
 
+                shaped(RecipeCategory.COMBAT, ModItems.TURTLE_SCUTE_HELMET)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .define('#', Items.TURTLE_SCUTE)
+                        .define('X', Items.ENCHANTED_GOLDEN_APPLE)
+                        .unlockedBy("has_item", has(Items.TURTLE_SCUTE))
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.TURTLE_SCUTE_CHESTPLATE)
+                        .pattern("#X#")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', Items.TURTLE_SCUTE)
+                        .define('X', Items.ENCHANTED_GOLDEN_APPLE)
+                        .unlockedBy("has_item", has(Items.TURTLE_SCUTE))
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.TURTLE_SCUTE_LEGGINGS)
+                        .pattern("###")
+                        .pattern("#X#")
+                        .pattern("# #")
+                        .define('#', Items.TURTLE_SCUTE)
+                        .define('X', Items.ENCHANTED_GOLDEN_APPLE)
+                        .unlockedBy("has_item", has(Items.TURTLE_SCUTE))
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.TURTLE_SCUTE_BOOTS)
+                        .pattern("#X#")
+                        .pattern("# #")
+                        .define('#', Items.TURTLE_SCUTE)
+                        .define('X', Items.ENCHANTED_GOLDEN_APPLE)
+                        .unlockedBy("has_item", has(Items.TURTLE_SCUTE))
+                        .save(output);
             }
         };
     }
