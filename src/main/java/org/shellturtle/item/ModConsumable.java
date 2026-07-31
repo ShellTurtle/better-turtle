@@ -18,6 +18,4 @@ public class ModConsumable {
                             new MobEffectInstance(MobEffects.SLOWNESS, 2400, 9)
                     ), 0.5F
             )).build();
-
-
 }
