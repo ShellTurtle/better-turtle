@@ -21,18 +21,26 @@ public class ModArmorSetEffect {
     private static void checkAndApplyArmorSetEffect(Player player) {
         boolean hasFullSet = hasFullTurtleArmorSet(player);
 
-        if (hasFullSet) {
+        //在水中时给予抗性提升2 水下呼吸 速度
+        if (hasFullSet&&player.isUnderWater()) {
             // 抗性提升2
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
             // 水下呼吸
             player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
-            // 速度 (在水中时)
-            if (player.isUnderWater()) {
-                player.addEffect(new MobEffectInstance(MobEffects.SPEED, 20, 2, false, false));
-            }
-            // 缓慢1
-            player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 20, 0, false, false));
+            // 速度
+            player.addEffect(new MobEffectInstance(MobEffects.SPEED, 20, 2, false, false));
         }
+
+        //不在水中时给予抗性提升2 水下呼吸 缓慢1
+        else {
+            // 抗性提升2
+            player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
+            // 水下呼吸
+            player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
+            // 速度
+            player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 20, 1, false, false));
+        }
+
     }
 
     private static boolean hasFullTurtleArmorSet(Player player) {
