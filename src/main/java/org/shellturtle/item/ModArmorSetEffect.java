@@ -27,18 +27,14 @@ public class ModArmorSetEffect {
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
             // 水下呼吸
             player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
-            // 速度
-            player.addEffect(new MobEffectInstance(MobEffects.SPEED, 20, 2, false, false));
         }
 
-        // 不在水中时给予抗性提升2 水下呼吸 缓慢2
+        // 不在水中时给予抗性提升2 缓慢1
         if (hasFullSet && !player.isInWater()) {
             // 抗性提升2
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
-            // 水下呼吸
-            player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
-            // 速度
-            player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 20, 1, false, false));
+            // 缓慢1
+            player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 20, 0, false, false));
         }
 
         // 玩家未穿戴全套乌龟护甲时移除乌龟护甲提供的所有buff和debuff
