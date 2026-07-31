@@ -71,3 +71,9 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+fabricApi {
+	configureDataGeneration() {
+		client = true
+	}
+}

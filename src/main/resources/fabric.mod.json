@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"org.shellturtle.BetterTurtle"
+		],
+		"fabric-datagen": [
+			"org.shellturtle.BetterTurtleDataGenerator"
 		]
 	},
 	"depends": {
