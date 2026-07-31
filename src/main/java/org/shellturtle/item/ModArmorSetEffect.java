@@ -21,8 +21,8 @@ public class ModArmorSetEffect {
     private static void checkAndApplyArmorSetEffect(Player player) {
         boolean hasFullSet = hasFullTurtleArmorSet(player);
 
-        //在水中时给予抗性提升2 水下呼吸 速度
-        if (hasFullSet&&player.isUnderWater()) {
+        // 在水中时给予抗性提升2 水下呼吸 速度
+        if (hasFullSet && player.isInWater()) {
             // 抗性提升2
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
             // 水下呼吸
@@ -31,8 +31,8 @@ public class ModArmorSetEffect {
             player.addEffect(new MobEffectInstance(MobEffects.SPEED, 20, 2, false, false));
         }
 
-        //不在水中时给予抗性提升2 水下呼吸 缓慢1
-        else {
+        // 不在水中时给予抗性提升2 水下呼吸 缓慢2
+        if (hasFullSet && !player.isInWater()) {
             // 抗性提升2
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
             // 水下呼吸
@@ -41,6 +41,13 @@ public class ModArmorSetEffect {
             player.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 20, 1, false, false));
         }
 
+        // 玩家未穿戴全套乌龟护甲时移除乌龟护甲提供的所有buff和debuff
+        if (!hasFullSet) {
+            player.removeEffect(MobEffects.RESISTANCE);
+            player.removeEffect(MobEffects.WATER_BREATHING);
+            player.removeEffect(MobEffects.SLOWNESS);
+            player.removeEffect(MobEffects.SPEED);
+        }
     }
 
     private static boolean hasFullTurtleArmorSet(Player player) {
@@ -49,9 +56,15 @@ public class ModArmorSetEffect {
         ItemStack leggings = player.getItemBySlot(EquipmentSlot.LEGS);
         ItemStack boots = player.getItemBySlot(EquipmentSlot.FEET);
 
-        return helmet.is(ModItems.TURTLE_SCUTE_HELMET) &&
-               chestplate.is(ModItems.TURTLE_SCUTE_CHESTPLATE) &&
-               leggings.is(ModItems.TURTLE_SCUTE_LEGGINGS) &&
-               boots.is(ModItems.TURTLE_SCUTE_BOOTS);
+        if (helmet.is(ModItems.TURTLE_SCUTE_HELMET) &&
+                chestplate.is(ModItems.TURTLE_SCUTE_CHESTPLATE) &&
+                leggings.is(ModItems.TURTLE_SCUTE_LEGGINGS) &&
+                boots.is(ModItems.TURTLE_SCUTE_BOOTS)) {
+            return true;
+        }
+
+        else {
+            return false;
+        }
     }
 }
