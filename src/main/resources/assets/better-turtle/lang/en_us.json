@@ -1,3 +1,7 @@
 {
-  "item.better-turtle.turtle_jelly": "Turtle jelly"
+  "item.better-turtle.turtle_jelly": "Turtle jelly",
+  "item.better-turtle.turtle_helmet": "Turtle Helmet",
+  "item.better-turtle.turtle_chestplate": "Turtle Chestplate",
+  "item.better-turtle.turtle_leggings": "Turtle Leggings",
+  "item.better-turtle.turtle_boots": "Turtle Boots"
 }

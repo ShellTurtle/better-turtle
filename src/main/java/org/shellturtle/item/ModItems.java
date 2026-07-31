@@ -12,11 +12,16 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
 
 public class ModItems {
     public static final Item TURTLE_JELLY = registerItem("turtle_jelly",Item::new , new Item.Properties().food(ModFoods.TURTLE_JELLY, ModConsumable.TURTLE_JELLY));
+    public static final Item TURTLE_HELMET = registerItem("turtle_helmet", Item::new, new Item.Properties().humanoidArmor(net.minecraft.world.item.equipment.ArmorMaterials.TURTLE_SCUTE, ArmorType.HELMET));
+    public static final Item TURTLE_CHESTPLATE = registerItem("turtle_chestplate", Item::new, new Item.Properties().humanoidArmor(net.minecraft.world.item.equipment.ArmorMaterials.TURTLE_SCUTE, ArmorType.CHESTPLATE));
+    public static final Item TURTLE_LEGGINGS = registerItem("turtle_leggings", Item::new, new Item.Properties().humanoidArmor(net.minecraft.world.item.equipment.ArmorMaterials.TURTLE_SCUTE, ArmorType.LEGGINGS));
+    public static final Item TURTLE_BOOTS = registerItem("turtle_boots", Item::new, new Item.Properties().humanoidArmor(net.minecraft.world.item.equipment.ArmorMaterials.TURTLE_SCUTE, ArmorType.BOOTS));
 
     private static Item registerItem(final String name, final Function<Item.Properties, Item> itemFactory, final Item.Properties properties) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BetterTurtle.MOD_ID, name));
@@ -39,6 +44,12 @@ public class ModItems {
     public static void register() {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(fabricCreativeModeTabOutput -> {
             fabricCreativeModeTabOutput.accept(TURTLE_JELLY);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(fabricCreativeModeTabOutput -> {
+            fabricCreativeModeTabOutput.accept(TURTLE_HELMET);
+            fabricCreativeModeTabOutput.accept(TURTLE_CHESTPLATE);
+            fabricCreativeModeTabOutput.accept(TURTLE_LEGGINGS);
+            fabricCreativeModeTabOutput.accept(TURTLE_BOOTS);
         });
     }
 }

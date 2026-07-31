@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
+import org.shellturtle.armor.ArmorSetEffect;
 import org.shellturtle.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ public class BetterTurtle implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.register();
+		ArmorSetEffect.register();
 		LOGGER.info("Better Turtle加载完成！");
 	}
 
