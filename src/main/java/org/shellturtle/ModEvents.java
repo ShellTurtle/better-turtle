@@ -2,11 +2,9 @@ package org.shellturtle;
 
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.animal.turtle.Turtle;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +20,6 @@ public class ModEvents {
     private static final long COOLDOWN_TICKS = 20 * 60 * 20; // 20分钟（20tick/秒 * 60秒 * 20分钟）
     private static final int MAX_SCUTES_PER_PERIOD = 64; // 最多掉落1组（64个）
     
-    private static final Map<UUID, Boolean> sterilizedTurtles = new HashMap<>();
     private static final Map<UUID, TurtleBrushData> turtleBrushData = new HashMap<>();
 
     // 海龟刷取数据记录
@@ -47,36 +44,6 @@ public class ModEvents {
             }
 
             ItemStack stack = player.getItemInHand(hand);
-            UUID turtleId = turtle.getUUID();
-
-            // 剪刀绝育功能
-            if (stack.getItem() == Items.SHEARS) {
-                if (sterilizedTurtles.containsKey(turtleId)) {
-                    // 已经绝育了
-                    player.sendSystemMessage(Component.literal("海龟已经绝育啦～"));
-                    return InteractionResult.SUCCESS;
-                }
-
-                // 执行绝育
-                sterilizedTurtles.put(turtleId, true);
-                player.sendSystemMessage(Component.literal("海龟已经绝育啦～"));
-                
-                // 播放剪刀声音
-                world.playSound(null, new BlockPos((int)turtle.getX(), (int)turtle.getY(), (int)turtle.getZ()), 
-                    SoundEvents.SHEEP_SHEAR, SoundSource.PLAYERS, 1.0F, 1.0F);
-                
-                return InteractionResult.SUCCESS;
-            }
-
-            // 检查是否是海草（繁殖物品）
-            if (stack.getItem() == Items.SEAGRASS) {
-                // 如果海龟已绝育，阻止繁殖
-                if (sterilizedTurtles.containsKey(turtleId)) {
-                    player.sendSystemMessage(Component.literal("这只海龟已经绝育了，无法繁殖。"));
-                    return InteractionResult.SUCCESS;
-                }
-                return InteractionResult.PASS;
-            }
 
             // 刷子刷鳞片功能
             if (stack.getItem() != Items.BRUSH) {
@@ -87,6 +54,7 @@ public class ModEvents {
                 return InteractionResult.PASS;
             }
 
+            UUID turtleId = turtle.getUUID();
             long currentTime = world.getGameTime();
             TurtleBrushData data = turtleBrushData.get(turtleId);
 
@@ -123,10 +91,5 @@ public class ModEvents {
 
             return InteractionResult.SUCCESS;
         });
-    }
-
-    // 检查海龟是否已绝育
-    public static boolean isTurtleSterilized(UUID turtleId) {
-        return sterilizedTurtles.containsKey(turtleId);
     }
 }

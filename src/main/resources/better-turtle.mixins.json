@@ -2,9 +2,7 @@
   "required": true,
   "package": "org.shellturtle.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "TurtleMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   }
