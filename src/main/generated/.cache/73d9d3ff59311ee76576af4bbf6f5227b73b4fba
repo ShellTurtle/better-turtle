@@ -1,0 +1,11 @@
+// 26.2	-999999999-01-01T00:00:00	Better Turtle/Model Definitions
+4750759c7f72f3cc1abf38e01bcb3185aac02c11 assets/better-turtle/items/turtle_jelly.json
+ad21a8981f624cfc38ef46b456f063729d63d9c6 assets/better-turtle/items/turtle_scute_boots.json
+a2ae9d2114b85eb37465a5ef8ea97043446036d6 assets/better-turtle/items/turtle_scute_chestplate.json
+21e183973b8d5e41ea867e972157a23ae756ae50 assets/better-turtle/items/turtle_scute_helmet.json
+a0f0ed6ed9fed555f2d9c30aa41e6a2ec8e73bd9 assets/better-turtle/items/turtle_scute_leggings.json
+8319ab43237a06f96ff932cd69d8819bc9d70f7b assets/better-turtle/models/item/turtle_jelly.json
+3622c008ab25939079ec73080f9e086a32f99bd0 assets/better-turtle/models/item/turtle_scute_boots.json
+1460492975cbc1bd848b2d6330f811cd3fa9d354 assets/better-turtle/models/item/turtle_scute_chestplate.json
+012cfe25a080a100369013dec0203f256536a3da assets/better-turtle/models/item/turtle_scute_helmet.json
+a23df3f9eccc488c3078ff423a281f649f0cc14f assets/better-turtle/models/item/turtle_scute_leggings.json

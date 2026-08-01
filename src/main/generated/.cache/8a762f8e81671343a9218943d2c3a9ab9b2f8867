@@ -1,0 +1,11 @@
+// 26.2	-999999999-01-01T00:00:00	Better Turtle/recipe gen
+65c7050f1151058fe067ecbcf0003b311cf62a4f data/better-turtle/advancement/recipes/combat/turtle_scute_boots.json
+5b21beeac8ac63b7cf2f1e7c53e77c439461ad4e data/better-turtle/advancement/recipes/combat/turtle_scute_chestplate.json
+69348f7bc751bcc42c4620453903acc1f45490bf data/better-turtle/advancement/recipes/combat/turtle_scute_helmet.json
+3b3f9eee9546d6e8e3eb870174fc1ab50843ad73 data/better-turtle/advancement/recipes/combat/turtle_scute_leggings.json
+85fa41baf4b3bb7bbd4488dae5a275bc9444c02d data/better-turtle/advancement/recipes/food/turtle_jelly.json
+39515f7a0377918670f863eff9d6183aa6e7918b data/better-turtle/recipe/turtle_jelly.json
+39d6e8585acf4e74927a1c6f822f5dce81db2c20 data/better-turtle/recipe/turtle_scute_boots.json
+5ffe50f58e10511955d1b8221bff9bb14bf8c48e data/better-turtle/recipe/turtle_scute_chestplate.json
+f5af73387972d188d62fa049d5f3484df075c04c data/better-turtle/recipe/turtle_scute_helmet.json
+ee4c472be2d19b02591e03df4f72959419d51748 data/better-turtle/recipe/turtle_scute_leggings.json

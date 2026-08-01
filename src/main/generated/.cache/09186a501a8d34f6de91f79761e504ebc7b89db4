@@ -1,0 +1,6 @@
+// 26.2	-999999999-01-01T00:00:00	Better Turtle/Tags for minecraft:item
+b31954eafe148ab4891ecc27ae84815687e0e9fa data/better-turtle/tags/item/turtle_scute_armor.json
+1f5998b1ff36356854723354edeb238dbada7e9a data/minecraft/tags/item/chest_armor.json
+3560c7d000ec3b926009b75a6aea5a679a0defb7 data/minecraft/tags/item/foot_armor.json
+8094361c1b2be98d4390521645043501b33571db data/minecraft/tags/item/head_armor.json
+7bc38c2d670565eba0af6d2ed9dc198bf9846681 data/minecraft/tags/item/leg_armor.json

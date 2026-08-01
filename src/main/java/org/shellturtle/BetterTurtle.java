@@ -19,6 +19,7 @@ public class BetterTurtle implements ModInitializer {
 		//调用ModItems
 		ModItems.register();
 		ModArmorSetEffect.register();
+		ModEvents.register();
 
 		//输出日志
 		LOGGER.info("Better Turtle加载完成！");
