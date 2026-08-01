@@ -18,7 +18,7 @@ import java.util.UUID;
 
 public class ModEvents {
     private static final long COOLDOWN_TICKS = 20 * 60 * 20; // 20分钟（20tick/秒 * 60秒 * 20分钟）
-    private static final int MAX_SCUTES_PER_PERIOD = 64; // 最多掉落1组（64个）
+    private static final int MAX_SCUTES_PER_PERIOD = 2; // 最多掉落10个
     
     private static final Map<UUID, TurtleBrushData> turtleBrushData = new HashMap<>();
 

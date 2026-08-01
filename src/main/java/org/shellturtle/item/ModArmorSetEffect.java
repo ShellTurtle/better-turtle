@@ -21,7 +21,7 @@ public class ModArmorSetEffect {
     private static void checkAndApplyArmorSetEffect(Player player) {
         boolean hasFullSet = hasFullTurtleArmorSet(player);
 
-        // 在水中时给予抗性提升2 水下呼吸 速度
+        // 在水中时给予抗性提升2 水下呼吸
         if (hasFullSet && player.isInWater()) {
             // 抗性提升2
             player.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 1, false, false));
@@ -52,15 +52,9 @@ public class ModArmorSetEffect {
         ItemStack leggings = player.getItemBySlot(EquipmentSlot.LEGS);
         ItemStack boots = player.getItemBySlot(EquipmentSlot.FEET);
 
-        if (helmet.is(ModItems.TURTLE_SCUTE_HELMET) &&
+        return helmet.is(ModItems.TURTLE_SCUTE_HELMET) &&
                 chestplate.is(ModItems.TURTLE_SCUTE_CHESTPLATE) &&
                 leggings.is(ModItems.TURTLE_SCUTE_LEGGINGS) &&
-                boots.is(ModItems.TURTLE_SCUTE_BOOTS)) {
-            return true;
-        }
-
-        else {
-            return false;
-        }
+                boots.is(ModItems.TURTLE_SCUTE_BOOTS);
     }
 }
