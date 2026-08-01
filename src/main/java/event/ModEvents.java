@@ -1,4 +1,4 @@
-package org.shellturtle;
+package event;
 
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 
@@ -83,7 +83,7 @@ public class ModEvents {
 
             // 扣除刷子耐久度（-5）
             if (!player.isCreative()) {
-                stack.hurtAndBreak(5, player, hand);
+                stack.hurtAndBreak(2, player, hand);
             }
 
             // 更新掉落数量

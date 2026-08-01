@@ -1,5 +1,6 @@
 package org.shellturtle;
 
+import event.ModEvents;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -16,12 +17,16 @@ public class BetterTurtle implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		//调用ModItems
+		// 调用ModItems
 		ModItems.register();
+
+		// 调用ModArmorSetEffect
 		ModArmorSetEffect.register();
+
+		// 调用ModEvents
 		ModEvents.register();
 
-		//输出日志
+		// 输出日志
 		LOGGER.info("Better Turtle加载完成！");
 	}
 
