@@ -22,6 +22,9 @@
 			"org.shellturtle.BetterTurtleDataGenerator"
 		]
 	},
+	"mixins": [
+		"better-turtle.mixins.json"
+	],
 	"depends": {
 		"fabricloader": "*",
 		"minecraft": "26.*",

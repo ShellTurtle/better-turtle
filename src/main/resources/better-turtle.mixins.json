@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "org.shellturtle.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

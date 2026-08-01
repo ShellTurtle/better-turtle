@@ -4,6 +4,7 @@ pluginManagement {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
 		mavenCentral()
 		gradlePluginPortal()
 	}

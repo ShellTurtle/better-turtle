@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:turtle_scute",
+    "minecraft:sugar",
+    "minecraft:honey_bottle",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "better-turtle:turtle_jelly"
+  }
+}
