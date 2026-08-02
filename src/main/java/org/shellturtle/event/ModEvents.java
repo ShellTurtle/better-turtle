@@ -1,4 +1,4 @@
-package event;
+package org.shellturtle.event;
 
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 

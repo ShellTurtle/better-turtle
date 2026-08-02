@@ -15,7 +15,7 @@ import java.util.Map;
 
 public interface ModArmorMaterials {
     ArmorMaterial TURTLE_SCUTE_ARMOR = new ArmorMaterial(
-            37, makeDefense(3, 6, 8, 3, 11), 10,
+            74, makeDefense(3, 6, 8, 3, 11), 10,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 0.0f, 0.1f, ModItemTags.TURTLE_SCUTE_ARMOR,
             createId("turtle_scute_armor"));
 

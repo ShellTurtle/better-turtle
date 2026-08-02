@@ -1,12 +1,13 @@
 package org.shellturtle;
 
-import event.ModEvents;
+import org.shellturtle.event.ModEvents;
+import org.shellturtle.item.ModArmorSetEffect;
+import org.shellturtle.item.ModItems;
+
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
-import org.shellturtle.item.ModArmorSetEffect;
-import org.shellturtle.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
